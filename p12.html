@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Alert(content)</li>
+        <li>Confirm(content)</li>
+        <li>Prompt(content)</li>
+    </ul>
+
+
+    <hr>
+
+    <button onclick="displayAlert()">Display output in Alert</button>
+    <button onclick="displaConfirm()">Display output in Confirm</button>
+    <button onclick="displatPrompt()">Display output in Prompt</button>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        // alert('hello this si the alert at first')
+        let x = 10, y = 90, total;
+        total = x+y;
+        //alert
+        function displayAlert(){
+            alert(`the sum of ${x} and ${y} = ${total}`)
+            alert('hello this is the alert messsage')
+        }
+        // displayAlert()
+
+        //confirm
+        function displaConfirm(){
+            confirm('are you sure want to delete account?')
+            confirm(`the sum of ${x} and ${y} = ${total}`)
+            confirm('hello this is the confirm messsage')
+        }
+        // displayConfirm()
+
+        //prompt
+        let container = document.getElementById('result')
+        function displatPrompt(){
+           let name =  prompt('please enter your name') //we getting username to name variable
+
+            prompt(`the sum of ${x} and ${y} = ${total}`)
+
+            prompt('hello this is the prompt messsage')
+
+            //displaying user entered value that is name variable
+            alert(`user entered name is = ${name}`) 
+
+            //displaying username inside thet result div
+            container.innerHTML += `<h1>hello 👋,, ${name}</h1>` 
+        }
+
+        
+    </script>
+</body>
+</html>

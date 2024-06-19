@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Do While loop</h1>
+    </center>
+
+    <p>the diffrence between do while loop and while loop the while loop first checks the condition and later it will executes the statements but the do while loop first executes the statements later it will check the condition.</p>
+
+
+    <script>
+
+        var value = prompt('enter any number'); //string
+        var num = Number(value);//number datatype
+
+        //in do while loop initilization, increment/decrement, condition
+
+        var i = 1; //inilization
+
+        do{
+            document.write(`<h1>${num} &times; ${i} = ${num * i}</h1>`)
+            i++; //increment
+        }while(i<=10); //condition
+    </script>
+</body>
+</html>

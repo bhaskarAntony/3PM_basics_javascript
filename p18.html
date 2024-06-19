@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+        .card{
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        .card input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .card button{
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: darkred;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Condition Statements</h1>
+    </center>
+    <hr>
+
+    <h1>Example for If Else Ladder</h1>
+
+  <div class="container">
+    <div class="card">
+        <h2>Grade checker</h2>
+        <input type="number" placeholder="enter your marks" id="marks">
+        <p id="output"></p>
+        <button onclick="check()">Check Grades</button>
+    </div>
+  </div>
+
+
+    <script>
+        // let marks = 85;
+        // if(marks >70 || marks ==100){marj
+        //     document.write(`<h1>Grade is A</h1>`)
+        // }else if(marks>50 || marks ==70){
+        //     document.write(`<h1>Grade is B</h1>`)
+        // }else if(marks>35 || marks ==50){
+        //     document.write(`<h1>Grade is C</h1>`)
+        // }else if(marks === 35){
+        //     document.write(`<h1>Grade is D</h1>`)
+        // }else{
+        //     document.write(`<h1>Grade not available, student is Fail/h1>`)
+        // }
+
+
+        //getting all html elements or tags from body to javascript using that id
+        let marks = document.getElementById('marks')
+        let output = document.getElementById('output')
+      
+        //creating function to execute when user clicks the button in form
+        function check(){
+        if(marks.value >70 || marks.value ==100){
+            output.innerHTML = `<span style="color:green">user enterd marks ${marks.value} is Grade A</span>`
+        }
+        
+        else if(marks.value>50 || marks.value ==70){
+           output.innerHTML = `<span style="color:green">user enterd marks ${marks.value} is Grade B</span>`
+        }
+        
+        else if(marks.value>35 || marks.value ==50){
+            output.innerHTML = `<span style="color:orange">user enterd marks ${marks.value} is Grade C</span>`
+        }
+        
+        else if(Number(marks.value) === 35){ //converting marks string datatype to number datatype
+            output.innerHTML = `<span style="color:orange">user enterd marks ${marks.value} is Grade D</span>`
+        }
+        
+        else{
+        
+                 output.innerHTML = `<span style="color:red">user enterd marks ${marks.value} ,Grade not available, student is Fail</span>`
+        }
+        }
+
+    </script>
+</body>
+</html>

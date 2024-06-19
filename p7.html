@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>All datatypes</h1>
+    </center>
+
+    <hr>
+
+
+    <script>
+
+        // Primitive Data Types(string, number, boolean)
+        var name = 'hello';
+        document.write(`<h1>name  = ${name}</h1>`)
+        document.write(`<h1>type  = ${typeof name}</h1> <hr>`)
+
+
+        var charecter = 'H';
+        document.write(`<h1>charecter  = ${charecter}</h1>`)
+        document.write(`<h1>type  = ${typeof charecter}</h1> <hr>`)
+
+
+        var number1 = 1000;
+        document.write(`<h1>number1  = ${number1}</h1>`)
+        document.write(`<h1>type  = ${typeof number1}</h1> <hr>`)
+
+
+        var number2 = 10.34;
+        document.write(`<h1>number2  = ${number2}</h1>`)
+        document.write(`<h1>type  = ${typeof number2}</h1> <hr>`)
+
+
+        //boolean
+        var isOnline = true; //or false
+        document.write(`<h1>isOnline  = ${isOnline}</h1>`) //true
+        document.write(`<h1>type  = ${typeof isOnline}</h1> <hr>`) //boolean
+
+        if(isOnline){
+            document.write(`<h1 style="color:green">yes is in online</h1>`)
+        }else{
+            document.write(`<h1 style="color:red">No, is in Offline</h1>`)
+        }
+
+
+        // Non-Primitive/ Derived Data Types (arrays, objects, functions)
+
+        //creating arrays
+        let colors = ["green", 'white', 'pink', 'orange', 'red', 'blue', 'yellow']; //array variable declartion
+
+        //reading compete array
+        document.write(`<h1>colors array variable  = ${colors}</h1>`)
+        console.log("colors = ", colors);
+
+        //reading array values (array[index])
+        document.write(`<h1>colors array variable  = ${colors[1]}</h1>`) //white
+        document.write(`<h1>colors array variable  = ${colors[0]}</h1>`)//green
+
+        document.write(`<h1>colors array variable  = ${typeof colors}</h1>`)//object
+
+
+        //creating objects (to store one perticular element information we can use the objects the objects are the keys and values(key and value pairs))
+        //obkject can contain multiple datatypes that can string, number, boolean, arrays, object, functions
+        // const user = {} //empty object
+        let user = {
+            username:"arun kumar", //property (key and value)
+            email:"arun@gmail.com", //string
+            hobbies:["coding", 'cycling', 'dancing', 'racing', 'yoga'], //array
+            address:{ //object
+                city:"bangalore",
+                doorNo:'156/3',
+                picode:7863 //number
+            },
+            followers:2876,
+            following:50 //number
+        }
+
+        document.write(`<h1>user object = ${user}</h1>`)
+        document.write(`<h1>user object username = ${user.username}</h1>`)
+        document.write(`<h1>user object email = ${user.email}</h1>`)
+
+
+        // printing object array property 
+        document.write(`<h1>user object hobbies1 = ${user.hobbies[0]}</h1>`)
+        document.write(`<h1>user object hobbies2 = ${user.hobbies[1]}</h1>`)
+        document.write(`<h1>user object hobbie3 = ${user.hobbies[2]}</h1>`)
+        document.write(`<h1>user object hobbies4 = ${user.hobbies[3]}</h1>`)
+        document.write(`<h1>user object hobbies5 = ${user.hobbies[4]}</h1>`)
+
+        console.log(user.hobbies[0]);
+
+        //printing nested object (address)
+        document.write(`<h1>user object address  city = ${user.address.city}</h1>`)
+        document.write(`<h1>user object address  door no = ${user.address.doorNo}</h1>`)
+        document.write(`<h1>user object address  pincode = ${user.address.picode}</h1>`)
+
+        console.log(user.address);
+
+
+        //followers
+        document.write(`<h1>user object followers  = ${user.followers}</h1>`)
+        document.write(`<h1>user object following  = ${user.following}</h1>`)
+
+
+
+        document.write(`<h1>user object datatype is  = ${typeof user}</h1>`) //object
+
+        //checking property datatypes
+        console.log(typeof user.username);
+
+
+        //creating functions
+        // function is a block of code it is  a re usesable code 
+        //function name(){} => syntax for function
+
+
+        function defaultFunction(){ //function declaration
+            let title = "this is a default function that means there are no parameters and no return value";
+
+            document.write(`<h1 style="color:green">this is from the function title = ${title}</h1>`);
+        }
+
+        // defaultFunction(); //function calling    
+        //without user interaction(if the website has been loaded)
+
+        
+    </script>
+
+<!-- caaling function with user interaction   -->
+<button onclick="defaultFunction()">call the default function</button>
+
+
+
+
+
+<center>
+    <h1>Parameter</h1>
+    <p>if u created any function and that function need any values from outside if u want send values to function from outside  we can pass by using parameters </p>
+    <hr>
+
+    <h1>return</h1>
+    <p>if u created function and if u want export any value from inside function to outside we can export or we can send by using return.</p>
+</center>
+
+
+<h1>Parameter Function</h1>
+
+<button onclick="Calucate(30, 10, 'add')">Addition</button>
+<button onclick="Calucate(30, 10, 'minus')">Subtraction</button>
+<button onclick="Calucate(30, 10, 'mul')">Multiplication</button>
+
+<script>
+    function Calucate(a, b, expression){
+        //checking what is the expression value
+        if(expression == 'add'){
+            document.write(`<h1>Sum of two numbers  = ${a+b}</h1>`)
+        }
+        else if(expression =="minus"){
+            document.write(`<h1>Sum of two numbers  = ${a-b}</h1>`)
+        }else if(expression == 'mul'){
+            document.write(`<h1>Sum of two numbers  = ${a*b}</h1>`)
+        }
+        else{
+            document.write(`<h1>Sum of two numbers  error</h1>`)
+        }
+    }
+    // Calucate(10, 1)
+</script>
+
+</body>
+</html>

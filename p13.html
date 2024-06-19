@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>getting details and storing in object using prompt </h1>
+    </center>
+
+    <button onclick="getDetails()">get Details</button>
+
+    <div id="card">
+
+    </div>
+
+    <script>
+        let card = document.getElementById('card');
+        function getDetails(){
+            let name = prompt('Enter your name');
+            let email = prompt('enter your email address');
+            let age = prompt('enter your age');
+
+            console.log(name);
+            console.log(email);
+            console.log(age);
+
+            //creating object to store user entered data in prompt
+
+
+            let userdata = {
+                username:name,
+                userEmail:email,
+                userAge:age
+            }
+            console.log(userdata);
+            card.innerHTML = `
+            <div>
+                <h3>username: ${userdata.username}</h3>    
+                <h5>email: ${userdata.userEmail}</h5>    
+                <p>age: ${userdata.userAge}</p>    
+            </div>
+            `
+        }
+    </script>
+</body>
+</html>

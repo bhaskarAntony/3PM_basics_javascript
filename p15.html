@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 20px;
+            background-color: lightblue;
+            border-radius: 10px;
+            border: 1px solid darkcyan;
+            margin: 30px;
+            color: darkcyan;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Operators</h1>
+        <p>Arithmetic operators: this operators are used to perform some mathematical operations between values or operands</p>
+    </center>
+
+    <div id="output">
+
+    </div>
+
+
+
+    <script>
+        let firstNumber = 20, secondNumber = 10
+        //addition
+        //select trhe div to display the output
+        let output = document.getElementById('output');
+
+        output.innerHTML = `
+        <div class="card">
+            <h1>Addition using +</h1>
+            <h3>addition of two numbers = ${firstNumber + secondNumber}</h3>
+        </div>
+        `
+
+        output.innerHTML += `
+        <div class="card">
+            <h1>Substraction using -</h1>
+            <h3>Substraction of two numbers = ${firstNumber - secondNumber}</h3>
+        </div>
+        `
+
+        output.innerHTML += `
+        <div class="card">
+            <h1>Multiplication using *</h1>
+            <h3>Multiplication of two numbers = ${firstNumber * secondNumber}</h3>
+        </div>
+        `
+
+        output.innerHTML += `
+        <div class="card">
+            <h1>Division using /</h1>
+            <h3>Division of two numbers = ${firstNumber / secondNumber}</h3>
+        </div>
+        `
+
+        output.innerHTML += `
+        <div class="card">
+            <h1>Modulus using %</h1>
+            <h3>Modulus of two numbers = ${firstNumber % secondNumber}</h3>
+        </div>
+        `
+
+        let number = 10;
+        output.innerHTML += `
+        <div class="card">
+            <h1>Post-Increment using value++</h1>
+            <h3>post-increment of number = ${number++}</h3>
+        </div>
+        `
+        let number2 = 10;
+        output.innerHTML += `
+        <div class="card">
+            <h1>post-decrement using value--</h1>
+            <h3>post-decrement of number2 = ${number2--}</h3>
+        </div>
+        `
+
+        //----------------------------------------------
+
+        let number3 = 10;
+        output.innerHTML += `
+        <div class="card">
+            <h1>Pre-Increment using ++value</h1>
+            <h3>Pre-increment of number3 = ${++number3}</h3>
+        </div>
+        `
+        let number4 = 10;
+        output.innerHTML += `
+        <div class="card">
+            <h1>Pre-decrement using --value</h1>
+            <h3>Pre-decrement of number4 = ${--number4}</h3>
+        </div>
+        `
+
+        
+
+        
+        
+
+    </script>
+</body>
+</html>

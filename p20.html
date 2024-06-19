@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #c7c7c7;
+            min-height: 100vh;
+        }
+        .group{
+
+        }
+        .group input, .group select{
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .card input:hover, .card select:hover{
+            border:2px solid darkgoldenrod;
+            background-color: rgba(184, 135, 11, 0.206);
+        }
+        .card button{
+            width: 100%;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, darkgoldenrod, rgb(249, 202, 84));
+            color: rgb(46, 9, 0);
+        }
+        .card{
+            width: 300px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 5px solid darkgoldenrod;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin: 40px;
+        }
+        .card button:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .card #result{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="group">
+                <label for="">First numbert</label>
+                <input type="text" placeholder="enter first number" required id="firstnumber">
+            </div>
+            <div class="group">
+                <label for="">second numbert</label>
+                <input type="text" placeholder="enter first number" required id="secondnumber">
+            </div>
+            <div class="group">
+                <label for="">select action</label>
+                <select name="action" id="action">
+                    <option value="add">Addition</option>
+                    <option value="sub">subtraction</option>
+                    <option value="mul">Multiplicatiobn</option>
+                    <option value="div">division</option>
+                    <option value="mod">modulus</option>
+                </select>
+            </div>
+            <p id="result"></p>
+            <button onclick="check()">Check value</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let firstnumber = document.getElementById('firstnumber')
+        let secondnumber = document.getElementById('secondnumber')
+        let action = document.getElementById('action')
+        let result = document.getElementById('result')
+
+        function check(){
+            switch(action.value){
+                case "add":
+                result.innerText = `the addition of ${firstnumber.value} and ${secondnumber.value} is ${Number(firstnumber.value)  +Number(secondnumber.value)}`
+                break;
+
+                case "sub":
+                result.innerText = `the substraction of ${firstnumber.value} and ${secondnumber.value} is ${Number(firstnumber.value)  - Number(secondnumber.value)}`
+                break;
+
+                case "mul":
+                result.innerText = `the multiplication of ${firstnumber.value} and ${secondnumber.value} is ${Number(firstnumber.value)  * Number(secondnumber.value)}`
+                break;
+
+                case "div":
+                result.innerText = `the division of ${firstnumber.value} and ${secondnumber.value} is ${Number(firstnumber.value)   / Number(secondnumber.value)}`
+                break;
+
+                case "mod":
+                result.innerText = `the modulus of ${firstnumber.value} and ${secondnumber.value} is ${Number(firstnumber.value)  % Number(secondnumber.value)}`
+                break;
+
+                default:
+                    result.innerHTML = `<span style="color:red">SOmething went wrong please select correct action</span>`  
+            }
+        }
+
+
+     
+    </script>
+</body>
+</html>

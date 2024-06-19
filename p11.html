@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            padding: 30px;
+            background-color: #9efc99;
+            border: 2px solid #0d1d0c;
+        }
+        #output3{
+            width: 100%;
+            min-height: 70px;
+            background-color: gray;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <ul>
+    <li>elemnt.innerHTML</li>
+    <li>anyElement.innerText</li>
+    <li>anyElement.textContent</li>
+   </ul> 
+
+
+   <h1>element.innerHTML</h1>
+
+   <!-- //example1 -->
+   <div id="result" >
+   
+   </div>
+
+   <!-- example2 -->
+   <div id="output2">
+  <h1>  the output is  = </h1>
+   </div>
+
+
+   <!-- example3 -->
+   <div class="card">
+    <h1>The result is</h1>
+    <div id="output3">
+
+    </div>
+   </div>
+   <button onclick="displayOutput()">Click to see result</button>
+
+
+
+ <!-- example4 -->
+   <div id="output4">
+   innerTextExample
+   </div>
+
+
+   <hr>
+   <br>
+
+   <!-- //example5 -->
+   <div id="output5">
+
+   </div>
+
+   <script>
+
+    let firstnumber = 100, secondnumber = 300, total;
+    total = firstnumber + secondnumber *100;
+
+    //we can select any html tags to javascript using that tag name and tag id and class names
+    //here we gonna select div tag to insert result or output
+
+    //example1
+    let output = document.getElementById('result');
+
+    //assaigning new value instead of the old value
+    output.innerHTML = `<h1>Result = ${total}</h1>`
+
+
+    //example2
+    //selecting one more div using that id
+    let output2 = document.getElementById('output2');
+    //if u are using + symbole before assaigning  new values that + will keeps the prev values
+    output2.innerHTML += `<h1>Output = ${total}</h1>`
+
+
+    //example3
+    let output3 = document.getElementById('output3');
+    function displayOutput(){
+        // document.write(`<h1>${total}</h1>`)
+        output3.innerHTML = `<h1>${total}</h1>`;
+    }
+
+
+    //example4
+    //select output4 div
+    let output4 = document.getElementById('output4');
+    output4.innerText += ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia dolorum asperiores hic excepturi atque laudantium, impedit vitae quasi minus nemo animi, minima in veritatis voluptas. Veritatis laudantium sapiente dolorem!'
+
+
+    // example5
+    let output5 = document.getElementById('output5');
+    output5.textContent += "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia dolorum asperiores hic excepturi atque laudantium, impedit vitae quasi minus nemo animi, minima in veritatis voluptas. Veritatis laudantium sapiente dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia dolorum asperiores hic excepturi atque laudantium, impedit vitae quasi minus nemo animi, minima in veritatis voluptas. Veritatis laudantium sapiente dolorem!"
+
+
+   </script>
+</body>
+</html>

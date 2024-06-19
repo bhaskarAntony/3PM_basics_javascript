@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Condition Statements</h1>
+    </center>
+    <hr>
+    <h1>Example for Switch Case</h1>
+    <p>1) Largest of two numbers using JS</p>
+    <p>2) Largest of three numbers using JS</p>
+    <p>3) Program to find out whether a given year is leap year or not?</p>
+
+    <script>
+        let action = prompt('Enter Any Action');
+
+        //syntax for switch statement
+        // switch (condition) { //condition
+        //     case condtion1: //else if
+        //         break;
+
+        //     case condtion2:
+        //         break;
+        //     case condtion3:
+        //         break;
+        //     default: //else
+        //         break;
+        // }
+
+
+        switch (action) {
+            case "one":
+                document.write(`<h1>user enterd action is one</h1>`)
+                break;
+
+            case "two":
+            document.write(`<h1>user enterd action is two</h1>`)
+                break;
+        
+            default:
+            document.write(`<h1>user enterd Invalid action</h1>`)
+                break;
+        }
+
+        // //in if statement we need to write like this syntax and conditions
+        // if(action === "one"){
+        //     document.write(`<h1>user enterd action is one</h1>`)
+        // }else if(action === "two"){
+        //     document.write(`<h1>user enterd action is two</h1>`)
+        // }else{
+        //     document.write(`<h1>user enterd Invalid action</h1>`)
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Ways to display the output or ant text in html file from javascript</h1>
+        <ul>
+            <li>Document.write</li>
+            <li>Document.writeln</li>
+            <li>console.log</li>
+            <li>console.table</li>
+            <li>elemnt.innerHTML</li>
+            <li>anyElement.innerText</li>
+            <li>anyElement.textContent</li>
+            <li>Alert(content)</li>
+            <li>Confirm(content)</li>
+            <li>Prompt(content)</li>
+        </ul>
+    </center>
+
+
+    <h1>Doument.write</h1>
+
+    <script>
+        let firstnumber = 10, secondNumber = 30, total; //in this case just we are total variable but we are not assaigned any value to that later we  can assaign
+       
+        //assaigning value to total variable
+        total = firstnumber + secondNumber;
+
+        document.write(`<div><h1> total is = ${total}</h1></div>`)
+
+        document.write("<h1> total is = ", total ,  "</h1>")
+
+        document.write("<h1> total is = "+ total +  "</h1>")
+
+        document.write("<h1> total dattype = "+ typeof(total) +  "</h1>")
+    </script>
+
+    <h1>console.log</h1>
+    <script>
+        let x = 10, y = 40, sum;
+        sum = x + y;
+
+        console.log('the sum of the x and y is', sum);
+        console.log('the sum of the x and y is '+ sum);
+        console.log(`the sum of ${x} and ${y}  = ${sum}`);
+    </script>
+
+    <hr>
+    <h1>console.table</h1>
+    <hr>
+    <script>
+        const employees = [
+            {
+                id:1,
+                name:'John doe',
+                position:'software developer',
+                salary:75000
+            },
+            {
+                id:2,
+                name:'Mohan',
+                position:'Project manager',
+                salary:85000
+            },
+            {
+                id:3,
+                name:'Arun',
+                position:'Product manager',
+                salary:95000
+            }
+        ]
+
+
+        //using console.log
+        console.log(employees);
+
+        //using console.table
+        console.table(employees)
+
+        //displaying perticular columns
+        console.table(employees, ["name","salary", "position"])
+
+
+
+
+        //we can print object data also in table
+        const student = {
+            username:"Arun",
+            email:"Arun@gmail.com",
+            phoneNumber:'+9183736683',
+            age:25
+        }
+
+        //using console.log
+        console.log(student)
+
+        //using console.table
+        console.table(student)
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>String datatype</h1>
+    </center>
+    <hr>
+
+    <script>
+    // Var, let and const are the keywords, is used for to declare the variable.
+    var firstname = "Arun";
+    document.write(`<h1>firstname = ${firstname}</h1>`);
+    document.write("<h1>firstname " + firstname +  "</h1>");
+
+    var imageURL = "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=600";
+
+    document.write(`<img src=${imageURL} alt="dd">`)
+
+    var lastname = "kumar";
+
+    var fullname = firstname  +  " " + lastname;
+    document.write(`<h1 style="color:green">fullname = ${fullname}</h1>`)
+
+    //we can print or check any vaiable datatype usisng typOf method
+    document.write(`<h1>firstname datatype is ${typeof(firstname)}</h1>`)
+    document.write(`<h1>lastname datatype is ${typeof lastname}</h1>`)
+    document.write(`<h1>fullname datatype is ${typeof fullname}</h1>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .card{
+            width: 300px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: 30px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+        }
+        .card input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 100px;
+            margin-top: 10px;
+        }
+        .card .btn-primary{
+            border:none;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            padding: 10px;
+            background-color: #3cf075;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn-primary:hover{
+            background-color: #128737;
+            cursor: pointer;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Nested Condition</h1>
+        <p>inside the condition another one condition this knowwn as nested condition  if the parent condtion is truewe then only the nested or child condition will works</p>
+
+        <div class="card">
+            <label for="">Enter any number</label>
+            <input type="number" placeholder="enter a number" id="number">
+            <p id="result"></p>
+            <button class="btn btn-primary" onclick="Calculate()">Calculate</button>
+        </div>
+
+        <script>
+            let number =document.getElementById('number');//input tag selected
+            // console.log(number);
+            // console.log(Number(number.value));
+            let result = document.getElementById('result');//p tag selected
+
+
+            function Calculate(){
+                if(!number.value == ""){
+                    //nested condtion
+                    if(Number(number.value)%2 ==0){
+                        result.innerHTML = `<span style="color:green">The given ${number.value} is a Even Number</span>`
+                           number.style.border = "1px solid green"
+                    }else{
+                    result.innerHTML = `<span style="color:orange">The given ${number.value} is a Odd Number</span>`
+
+                       number.style.border = "1px solid orange"
+                    }
+                }
+                else{
+                result.innerHTML = `<span style="color:red">Please Enter a number to check..</span>`
+                number.style.border = "1px solid red"
+                    
+                  }
+            }
+        </script>
+    </center>
+</body>
+</html>
